@@ -1,0 +1,7 @@
+.DS_Store
+
+# excecutable file
+/server
+
+# compiled files
+*.o

@@ -1,10 +1,10 @@
 CC:=clang++
 CFLAGS:=-c -Wall -O2 -std=c++1y
-LDFLAGS:=-lboost_system
+LDFLAGS:=-lboost_system -v
 
-OBJECTS:= src/main.o \
-	src/server/handler_allocator.o
-	src/server/server.o
+OBJECTS:= \
+	src/main.o \
+	src/server.o
 
 TARGET:=server
 

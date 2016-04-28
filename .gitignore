@@ -5,3 +5,5 @@
 
 # compiled files
 *.o
+
+*.sublime-*

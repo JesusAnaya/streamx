@@ -1,21 +1,13 @@
 #include <iostream>
-#include "server/server.h"
+#include "server.h"
 
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     try {
-        if (argc != 2) {
-            std::cerr << "Usage: server <port>\n";
-            return 1;
-        }
-
-        boost::asio::io_service io_service;
-        streamx::server s(io_service, std::atoi(argv[1]));
-        io_service.run();
+        streamx::Server server;
+        server.run();
+    } catch(std::exception &e) {
+        std::cerr << e.what() << std::endl;
     }
-    catch (std::exception& e) {
-        std::cerr << "Exception: " << e.what() << "\n";
-    }
-
     return 0;
 }
